@@ -1,0 +1,20 @@
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver: 'pdo_mysql'
+                host: 'localhost'
+                port: '3306'
+                dbname: 'politanalytics'
+                user: 'root'
+                password: ''
+                charset: UTF8
+    orm:
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    App:
+                        type: attribute
+                        dir: '%kernel.project_dir%/src/Utils/Doctrine'
+                        prefix: 'App//Utils//Doctrine'
